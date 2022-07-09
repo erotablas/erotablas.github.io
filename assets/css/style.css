@@ -76,10 +76,6 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 100%;
-
-    /* fit the image */
-    object-fit: cover;
-    object-position: 0px -75px;
 }
 
 #icons-container {
