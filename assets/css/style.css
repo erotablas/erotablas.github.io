@@ -25,6 +25,15 @@
   }
 }
 
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
     background: linear-gradient(to bottom, #44a96b 0%, #44d0cb 100%);
     background-size: cover;
@@ -34,9 +43,9 @@ body {
 }
 
 #title {
-    font-size: 2.5em;
+    font-size: 1em;
     font-family: 'Roboto', sans-serif;
-    color: rgb(156, 171, 184);
+    color: rgb(182, 192, 201);
     text-align: center;
     margin: 10px;
 
@@ -67,7 +76,60 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 100%;
+
     /* fit the image */
     object-fit: cover;
     object-position: 0px -75px;
+}
+
+#icons-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    /* fade-in animation */
+    animation: fadeInOpacity 5s;
+}
+
+.icon-container:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+.icon-text {
+    opacity: 0;
+}
+
+.icon-container:hover > .icon-text {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+@media only screen and (min-width: 768px) {
+    #title {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #title {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #title {
+        font-size: 2.5em;
+    }
 }
